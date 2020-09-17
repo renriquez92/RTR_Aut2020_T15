@@ -19,14 +19,14 @@
 %%%%
 
 
-L1=10;      %Length from 0 to 1
-L2=5;       %Length from 1 to 2
-L3=5;       %Length from 2 to 3
-L4=3;       %Length from 4 to 4
+L1=10;      %Length from 0 to 1 @time 0
+L2=5;       %Length from 1 to 2 @all time
+L3=5;       %Length from 2 to 3 @all time
+L4=3;       %Length from 4 to 4 @all time
 h=2;        %Pitch
-w1=pi/4;    %Angular Velocity
-w2=pi/8;    %Angular Velocity
-w3=-pi/4;   %Angular Velocity
+w1=pi/4;    %Angular Velocity @all time
+w2=pi/8;    %Angular Velocity @all time
+w3=-pi/4;   %Angular Velocity @all time
 
 
  T1=[ 1 , 0 , 0 , 0  ;
