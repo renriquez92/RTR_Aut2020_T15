@@ -1,35 +1,9 @@
-%%%%    Tsb=EEFrameConfig(g)    %%%%
-%%%%    
-%%%%    E=H[0,4]=H1[0,1]*H2[1,2]*H3[2,3]*H4[3,4]    Position of the end
-%%%%    effector as a function of all other homogeneous transformations
-%%%%    
-%%%%    Using Euler's notation
-%%%%    
-%%%%    H1=T01[L1,x]
-%%%%    H2=T12[L2,y]*R[-90,z]
-%%%%    H3=T23[L3,y]*R[-90,z]*R[90,y]
-%%%%    H4=T34[L4,-y]*R[90,z]*R[-90,y]
-%%%%    
-%%%%    R=Rxyz=[      CyCZ     ,  -CySz      ,    Sy   ,  0
-%%%%              SxSyCz+CxSz  ,-SxSySz+CxCy ,  -SxCy  ,  0
-%%%%              -CxSyCz+SxSz ,CxSySz+SxCz  ,   CxCy  ,  0
-%%%%                    0      ,    0        ,    0    ,  1   ]
-%%%%
-%%%%
-%%%%    Using D-H notation
-%%%%
-%%%%    H= DH trasnformation matrix eed to write
-%%%%    
-%%%%    
-%%%%
-%%%%
-%%%%
-%%%%
-
-%%%%    Forward kinematics as a function of t in the D-H parameter notation
+%%%% q=SpatialPosition(t) %%%%
+%%%% Basicaly the same but with T(1,0,-1) translation extra at the end and
+%%%% a plot
 
 t=sym('t');
-%T=0:1:8;
+T=0:1:8;
 
 w1=pi/4;    %Angular Velocity @all time
 w2=pi/8;    %Angular Velocity @all time
@@ -77,16 +51,6 @@ P(1,1)=E(1,4);P(2,1)=E(2,4);P(3,1)=E(3,4);  %P is just a simple extraction of th
 
 
 P=simplify(P);
-
-%T=6;
-%T=0:1:3;
-%P=subs(P,t,T);
+P=subs(P,t,T);
 P=simplify(P);
-
-
-%%%% q=SpatialPosition(t) %%%%
-%%%% Basicaly the same but with T(1,0,-1) translation extra at the end
-
-       
-       
-       
+%plot3(P(1,:),P(2,:),P(3,:))

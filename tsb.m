@@ -81,8 +81,7 @@ P(1,1)=E(1,4);P(2,1)=E(2,4);P(3,1)=E(3,4);  %P is just a simple extraction of th
 %%%% Basicaly the same but with T(1,0,-1) translation extra at the end and
 %%%% a plot
 
-t=sym('t');
-T=0:1:8;
+t=6;
 
 w1=pi/4;    %Angular Velocity @all time
 w2=pi/8;    %Angular Velocity @all time
@@ -128,8 +127,7 @@ E=H1*H2*H3*H4; %homogeneous transformation from S to b
 
 P(1,1)=E(1,4);P(2,1)=E(2,4);P(3,1)=E(3,4);  %P is just a simple extraction of the position matrix at the end of the homogeneous transformation
 
-
-P=simplify(P);
+%P=simplify(P);
 %P=subs(P,t,T);
 %P=simplify(P);
 %plot3(P(1,:),P(2,:),P(3,:))
