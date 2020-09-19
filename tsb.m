@@ -30,7 +30,7 @@ clear ALL
 
 %%%%    Forward kinematics as a function of t in the D-H parameter notation
 
-t=1;        %calculate at time t
+t=6;        %calculate at time t
 
 w1=pi/4;    %Angular Velocity @all time
 w2=pi/8;    %Angular Velocity @all time
